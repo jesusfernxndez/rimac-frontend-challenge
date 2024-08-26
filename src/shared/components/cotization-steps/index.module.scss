@@ -1,0 +1,40 @@
+.cotizationsteps {
+  width: 100%;
+  background: #edeffc;
+  padding: 16px 12px;
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+}
+.cotizationsteps__nobackground {
+  background: transparent;
+  border-bottom: 1px solid #d7dbf5;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  padding: 16px 24px;
+}
+.inline__steps {
+  font-size: 10px;
+  line-height: 16px;
+  letter-spacing: 0.8px;
+  font-weight: 900;
+  text-wrap: nowrap;
+}
+.back {
+  display: flex;
+  align-items: center;
+  button {
+    display: flex;
+    background-color: transparent;
+    align-items: center;
+    border: none;
+    outline: none;
+  }
+}
+.line {
+  width: 100%;
+  height: 4px;
+  background: #d7dbf5;
+  border-radius: 4px;
+}

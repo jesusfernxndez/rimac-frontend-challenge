@@ -1,0 +1,21 @@
+.form {
+  display: grid;
+  row-gap: 16px;
+}
+.form__summary {
+  margin-bottom: 8px;
+}
+.form__terms {
+  margin-bottom: 20px !important;
+  font-size: 12px;
+  line-height: 20px;
+  letter-spacing: 0.1px;
+  text-decoration: underline;
+  font-weight: 600;
+}
+@media (min-width: 1024px) {
+  .form {
+    max-width: 352px;
+    margin-left: 32px;
+  }
+}

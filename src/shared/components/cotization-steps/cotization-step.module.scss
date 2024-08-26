@@ -1,0 +1,41 @@
+.cotizationstep {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+}
+.cotizationstep__step {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  border: 1px solid #7981b2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: transparent;
+  span {
+    font-size: 12px;
+    line-height: 16px;
+    letter-spacing: 0.4px;
+    font-weight: 700;
+    color: #7981b2;
+  }
+}
+.cotizationstep__text {
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: 0.2px;
+  color: #7981b2;
+}
+.cotizationstep__active {
+  .cotizationstep__step {
+    background-color: #4f4fff;
+    border: 1px solid #4f4fff;
+    span {
+      color: #ffffff;
+    }
+  }
+  .cotizationstep__text {
+    font-weight: 700;
+    color: #141938;
+  }
+}

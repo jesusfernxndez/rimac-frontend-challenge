@@ -1,0 +1,113 @@
+.cotizationview {
+  font-family: var(--lato-font);
+  --cotizationview-padding: 32px 24px;
+  display: var(--view-display);
+  grid-template-columns: var(--view-grid-template-columns);
+  column-gap: var(--view-grid-column-gap);
+  row-gap: var(--view-grid-row-gap);
+  max-width: var(--wrapper-max-width);
+  margin: 0 auto;
+  padding: var(--cotizationview-padding);
+}
+.cotizationview__back {
+  display: none;
+  button {
+    display: flex;
+    background-color: transparent;
+    gap: 8px;
+    align-items: center;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    &:hover {
+      span {
+        text-decoration: underline;
+      }
+    }
+    span {
+      font-size: 18px;
+      line-height: 20px;
+      letter-spacing: 0.4px;
+      font-weight: 700;
+      color: #4f4fff;
+    }
+  }
+}
+.cotizationview__text {
+  grid-column: span 4;
+  color: #141938;
+  h1 {
+    font-size: 28px;
+    line-height: 36px;
+    letter-spacing: -0.2px;
+    font-weight: 700;
+  }
+  h5 {
+    font-size: 16px;
+    line-height: 28px;
+    letter-spacing: 0.1px;
+    font-weight: 400;
+    margin-top: 8px;
+  }
+}
+.cotizationview__forme {
+  grid-column: span 4;
+  margin-top: 16px;
+}
+.cotizationview__formotherperson {
+  grid-column: span 4;
+  margin-top: 8px;
+}
+.cotizationview__planslist {
+  grid-column: span 4;
+}
+@media (min-width: 768px) {
+  .cotizationview {
+    --cotizationview-padding: 40px 12px;
+  }
+  .cotizationview__back {
+    display: block;
+    grid-column: 2 / span 10;
+  }
+  .cotizationview__text {
+    grid-column: 3 / span 8;
+    padding: 50px 0 16px 0;
+    h1 {
+      font-size: 40px;
+      line-height: 48px;
+      letter-spacing: -0.6px;
+      text-align: center;
+    }
+    h5 {
+      text-align: center;
+    }
+  }
+  .cotizationview__forme {
+    grid-column: 3 / span 4;
+    margin-top: 0;
+  }
+  .cotizationview__formotherperson {
+    grid-column: 7 / span 4;
+    margin-top: 0;
+  }
+  .cotizationview__planslist {
+    grid-column: span 12;
+  }
+}
+@media (min-width: 1024px) {
+  .cotizationview__back {
+    grid-column: 3 / span 9;
+  }
+  .cotizationview__text {
+    grid-column: 4 / span 6;
+  }
+  .cotizationview__forme {
+    grid-column: 4 / span 3;
+  }
+  .cotizationview__formotherperson {
+    grid-column: 7 / span 3;
+  }
+  .cotizationview__planslist {
+    grid-column: 1 / span 12;
+  }
+}
