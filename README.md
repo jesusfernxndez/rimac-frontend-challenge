@@ -1,50 +1,43 @@
-# React + TypeScript + Vite
+# Sustentación del Proyecto
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Introducción
 
-Currently, two official plugins are available:
+Este proyecto es una aplicación web desarrollada como parte de un reto técnico para Rimac Seguros. La aplicación está construida utilizando **React** con **TypeScript** y **Vite** como herramienta de construcción. El objetivo principal es proporcionar una experiencia de usuario fluida y eficiente para la cotización de seguros.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Estructura del Proyecto
 
-## Expanding the ESLint configuration
+La estructura del proyecto está organizada de la siguiente manera:
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+- **src/**: Contiene todo el código fuente de la aplicación.
+  - **assets/**: Archivos estáticos como imágenes y fuentes.
+  - **shared/**: Componentes, hooks, iconos, store y tipos compartidos.
+    - **components/**: Componentes reutilizables como botones, checkboxes, inputs, etc.
+    - **hooks/**: Hooks personalizados para manejar lógica de negocio.
+    - **icons/**: Iconos utilizados en la aplicación.
+    - **store/**: Estado global de la aplicación utilizando un store.
+    - **types/**: Definiciones de tipos TypeScript.
+  - **styles/**: Archivos SCSS para estilos globales y variables.
+  - **views/**: Vistas principales de la aplicación, como cotización, home y resumen.
 
-- Configure the top-level `parserOptions` property like this:
+## Principales Componentes y Funcionalidades
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+- **Formulario**: Un formulario interactivo para la entrada de datos del usuario, utilizando componentes reutilizables como `Button`, `Checkbox`, `Input` y `SelectWithInput`.
+- **Cotización**: Vista principal para la cotización de seguros, que incluye componentes como `CardTypeCotization` y `PlansList`.
+- **Resumen**: Vista de resumen que muestra la información del plan de seguro seleccionado.
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+## Principios de Diseño y Buenas Prácticas
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
+- **SOLID**: Se han aplicado principios SOLID para asegurar un código mantenible y extensible.
+  - **Single Responsibility Principle**: Cada componente tiene una única responsabilidad.
+  - **Open/Closed Principle**: Los componentes están diseñados para ser extendidos sin necesidad de modificar el código existente.
+- **Clean Code**: Se ha seguido la filosofía de clean code para asegurar un código legible y fácil de entender.
+- **Optimización de Rendimiento**: Uso de `React.memo` para evitar renderizados innecesarios y mejorar el rendimiento.
 
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
-```
+## Estilos y Responsividad
+
+- **SCSS**: Se ha utilizado SCSS para manejar los estilos de manera modular y reutilizable.
+- **Media Queries**: Se han implementado media queries para asegurar que la aplicación sea responsiva y se vea bien en diferentes tamaños de pantalla.
+
+## Conclusión
+
+Este proyecto demuestra la capacidad de construir una aplicación web moderna y eficiente utilizando las mejores prácticas de desarrollo. La estructura modular y el uso de principios SOLID aseguran que el código sea mantenible y escalable.
